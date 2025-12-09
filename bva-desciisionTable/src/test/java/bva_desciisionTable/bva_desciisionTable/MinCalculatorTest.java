@@ -34,4 +34,26 @@ public class MinCalculatorTest {
 	        // assert
 	        assertEquals(10, result);   // 1 הוא הערך המינימלי
 	    }
+
+	public void a_min_minus_1() {
+		MinCalculator.findMin(0, 50, 50, 50, 50);
+	}
+	public void a_min() {
+		assertEquals(1, MinCalculator.findMin(1, 50, 50, 50, 50));
+	}
+	public void a_min_plus_1() {
+		assertEquals(2, MinCalculator.findMin(2, 50, 50, 50, 50));
+	}
+	public void a_nominal() {
+		assertEquals(50, MinCalculator.findMin(50, 50, 50, 50, 50));
+	}
+	public void a_max_minus_1() {
+		assertEquals(50, MinCalculator.findMin(999, 50, 50, 50, 50));
+	}
+	public void a_max() {
+		assertEquals(50, MinCalculator.findMin(1000, 50, 50, 50, 50));
+	}
+	public void a_max_plus_1() {
+		MinCalculator.findMin(1001, 50, 50, 50, 50);
+	}
 }
